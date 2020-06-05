@@ -77,7 +77,6 @@ for c in cities:
 
 # TODO Get latitude and longitude values from the user
 
-
 # Using parse input
 def parseInput(userInput):
     return userInput.split(',')
@@ -88,15 +87,20 @@ lat2, lon2 = parseInput(input('Please enter last2,lon2:'))
 
 
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
-
-
-    # within will hold the cities that fall within the specified region
-    #     lats = [lat1, lat2]
-    #     lats.sort()
-    #     lons = [lon1, lon2]
-    #     lons.sort()
+# within will hold the cities that fall within the specified region
   within = []
 
 # TODO Ensure that the lat and lon valuse are all floats
 # Go through each city and check to see if it falls within
 # the specified coordinates.
+  min_lat = min(float(lat1), float(lat2))
+  max_lat = max(float(lat1), float(lat2))
+  min_lon = min(float(lon1), float(lon2))
+  max_lon = max(float(lon1), float(lon2))
+  for city in cities:
+          if min_lat < city.lat < max_lat and min_lon < city.lon < max_lon:
+              within.append(city)
+  return within
+  
+
+  #Checking for Columbia 38.9047,-77.0163,5191844,4301
