@@ -95,7 +95,7 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
     #     lats.sort()
     #     lons = [lon1, lon2]
     #     lons.sort()
-within = []
+  within = []
 
 # TODO Ensure that the lat and lon valuse are all floats
 # Go through each city and check to see if it falls within
