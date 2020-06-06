@@ -77,6 +77,18 @@ for c in cities:
 
 # TODO Get latitude and longitude values from the user
 
+
+
+
+
+
+
+
+
+
+
+
+
 # Using parse input
 def parseInput(userInput):
     return userInput.split(',')
@@ -102,5 +114,6 @@ def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
               within.append(city)
   return within
   
-
-  #Checking for Columbia 38.9047,-77.0163,5191844,4301
+print(cityreader_stretch(32, -120, 45, -100, cities = cities))
+for c in cities:
+  print(c.name, c.lat, c.lon)
